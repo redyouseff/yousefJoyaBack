@@ -24,6 +24,7 @@ const laxuryRoutes = require("./routes/laxuryRoutes");
 const imageServices = require("./routes/imageServicesRoutes");
 
 const { errorHandler } = require("./middleware/errormiddleware");
+const test="jjj"
 
 const app = express();
 app.use('/images', express.static('images'));
