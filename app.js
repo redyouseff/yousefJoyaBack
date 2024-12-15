@@ -50,7 +50,7 @@ const corsOptions = {
     origin: [
       "http://localhost:3000",  // Allow local development
       "http://192.168.1.6:3000",  // Allow local development with specific IP
-      "https://joya-seven.vercel.app",  // Allow production frontend URL
+      "https://joyav3.vercel.app",  // Allow production frontend URL
     ], 
     methods: ["GET", "POST", "PUT", "DELETE"],  // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"],  // Allowed headers
