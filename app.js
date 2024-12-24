@@ -24,12 +24,13 @@ const laxuryRoutes = require("./routes/laxuryRoutes");
 const imageServices = require("./routes/imageServicesRoutes");
 
 const { errorHandler } = require("./middleware/errormiddleware");
-const test="jjj"
+
 
 const app = express();
 app.use('/images', express.static('images'));
 // Connect MongoDB
 connectDB();
+
 
 // Middleware
 app.use(express.json()); // Parse JSON bodies
@@ -52,8 +53,11 @@ const corsOptions = {
       "http://192.168.1.6:3000",  // Allow local development with specific IP
       "https://joyav3.vercel.app",  // Allow production frontend URL
       "https://joya-proprties-front.vercel.app", 
-      "https://joyaproperties.com/",  
-      "https://joyaproperties.com/",  
+      "https://joyaproperties.com",  
+      "https://joyaproperties.com",
+      "https://joyaproperties.com",
+      
+
     ], 
     methods: ["GET", "POST", "PUT", "DELETE"],  // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"],  // Allowed headers
@@ -84,6 +88,8 @@ app.use("/api/image-services", imageServices);
 app.get('/', (req, res) => {
     res.send('API is running');
   });
+
+  
   
 // Error Handler
 app.use(errorHandler);  // Enable custom error handling
